@@ -1,0 +1,170 @@
+    /*ГОТОВО ГЛАВНАЯ СТРАНИЦА
+      ГОТОВО СТРАНИЦА ПРАЙС
+    */
+    
+    
+    @media only screen and (max-width:1200px){ 
+      header .media-flex .icon span a .phone_elem{
+          display: block;
+          margin-right: -10px;
+        }
+        .phone{
+          display: none;
+        }
+        header .icon img{
+          margin-top: 5px;
+        }
+    }
+  
+  @media only screen and (max-width:992px){
+  .menuBtn{
+    display: flex;
+    border: none;
+  } 
+   header .media-flex{
+    display: none;
+  }
+  header .media-flex .nav{
+    flex-direction: column;
+    margin-top: 60px;
+    line-height: 40px;
+  }
+  .telega{
+    margin-top: 5px;
+    
+  }
+   .media-flex.popUp{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: 1px solid rgb(71, 2, 108);
+    background: -webkit-linear-gradient(225deg, rgb(71, 2, 108), rgb(0, 0, 0));
+    background: -moz-linear-gradient(225deg, rgb(71, 2, 108), rgb(0, 0, 0));
+    background: linear-gradient(225deg, rgb(71, 2, 108), rgb(0, 0, 0));;
+    position: absolute;
+    margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    animation-duration: 0.55s;  /* Время работы анимации */
+    animation-fill-mode: both;  /* Поведение анимации */
+    animation-name: fadeInDown;/* Имя анимации */
+  } 
+  @keyframes fadeInDown { /* Сама анимация */
+    0% {                /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(0%, -100px, 0px);
+    }
+    100% {              /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+    }
+  }
+  body main .swiper-slide details{
+    font-size: 25px;
+  }
+  body main .swiper-slide p{
+    margin: 5px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  }
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+    .menuBtn{
+      margin-left: 80%;
+    }
+    body .config-pk{
+      margin: 50px;
+    }
+    body swiper-slide{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: -5px;
+    }
+    body swiper-slide h2{
+      text-align: center;
+    }
+    body swiper-slide p br:nth-of-type(1){
+      display: none;
+    }
+    body swiper-slide p br:nth-of-type(3){
+      display: none;
+    }
+    body .container-price .block-price .block-price_table table tr td:nth-of-type(2){
+      padding-left: 10%;
+    }
+    body .container-price .block-price .block-price_table table tr td:nth-of-type(3){
+      display: none;
+    }
+    body .container-price .block-price .block-price_table table tr td h2{
+      font-size: 23px;
+      margin-left: 5px;
+    }
+    .table_p-one, .table_p-two, .table_p-three{display: none;}
+    .table_p-one.activeOne{
+      display: flex;
+      animation: tableAnimation 1s ease-in;
+    }
+    .table_p-two.activeTwo{
+      display: flex;
+      animation: tableAnimation 1s ease-in;
+    }
+    .table_p-three.activeThree{
+      display: flex;
+      animation: tableAnimation 1s ease-in;
+    }
+    @keyframes tableAnimation {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+    #clickOne, #clickTwo, #clickThree{
+      font-size: 15px;
+      color: #cdcdcd;
+      display: block;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width:570px){
+    .menuBtn{
+      margin-left: 73%;
+    }
+    body swiper-slide img{
+      justify-content: center;
+      width: 100%;
+    }
+    body main .swiper-button-next, body main .swiper-button-prev {
+      display: none;
+    }
+    body .config-pk{
+      margin: 40px;
+    }
+    footer .icon{
+      flex-direction: row;
+      margin-left: 0px;
+    }
+    .btn-up{
+      right: 1%;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media only screen and (max-width:355px){
+    header h1{
+      font-size: 20px;
+    }
+    .menuBtn{
+      margin-left: 70%;
+    }
+  }
+  @media only screen and (max-width:320px){
+    
+  }
+  

@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  padding-top: 100px;
+}
+main .container-config h2 {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  color: #c6b241;
+}/*# sourceMappingURL=scss.css.map */
