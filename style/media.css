@@ -82,7 +82,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: -5px;
+      margin-left: -1px;
+    }
+    .swiper-slide_column{
+      margin: 5px;
     }
     body swiper-slide h2{
       text-align: center;
@@ -103,7 +106,11 @@
       font-size: 23px;
       margin-left: 5px;
     }
-    .table_p-one, .table_p-two, .table_p-three{display: none;}
+    body .container-price .block-price .block-price_table table tr td p{
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .table_p-one, .table_p-two, .table_p-three, .table_p-four, .table_p-five{display: none;}
     .table_p-one.activeOne{
       display: flex;
       animation: tableAnimation 1s ease-in;
@@ -116,6 +123,14 @@
       display: flex;
       animation: tableAnimation 1s ease-in;
     }
+    .table_p-four.activeFour{
+      display: flex;
+      animation: tableAnimation 1s ease-in;
+    }
+    .table_p-five.activeFive{
+      display: flex;
+      animation: tableAnimation 1s ease-in;
+    }
     @keyframes tableAnimation {
       0%{
         opacity: 0;
@@ -124,7 +139,7 @@
         opacity: 1;
       }
     }
-    #clickOne, #clickTwo, #clickThree{
+    #clickOne, #clickTwo, #clickThree, #clickFour, #clickFive{
       font-size: 15px;
       color: #cdcdcd;
       display: block;
@@ -136,6 +151,7 @@
     .menuBtn{
       margin-left: 73%;
     }
+    
     body swiper-slide img{
       justify-content: center;
       width: 100%;
@@ -143,6 +159,7 @@
     body main .swiper-button-next, body main .swiper-button-prev {
       display: none;
     }
+
     body .config-pk{
       margin: 40px;
     }
@@ -155,6 +172,14 @@
       width: 40px;
       height: 40px;
     }
+    main .container-config .config img{
+      width: 350px;
+      height: 350px;
+    }
+    .contact-container .map .map-text .map-text_list{
+      margin-left: -100px;
+      text-align: center;
+    }
   }
   @media only screen and (max-width:355px){
     header h1{
@@ -162,6 +187,10 @@
     }
     .menuBtn{
       margin-left: 70%;
+    }
+    main .container-config .config img{
+      width: 300px;
+      height: 300px;
     }
   }
   @media only screen and (max-width:320px){

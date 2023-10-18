@@ -1,0 +1,108 @@
+@-webkit-keyframes contectDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes contectDisplay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contact-container {
+  -webkit-animation: contectDisplay 1s ease-in;
+          animation: contectDisplay 1s ease-in;
+  padding-top: 100px;
+}
+.contact-container h1 {
+  font-weight: 100;
+  text-align: center;
+  color: #c6b241;
+}
+.contact-container h1 a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+.contact-container p {
+  margin-top: 50px;
+  text-align: center;
+  color: #c6b241;
+  line-height: 25px;
+  font-size: 18px;
+}
+.contact-container hr {
+  border: 1px solid #522e93;
+  margin-top: 50px;
+}
+.contact-container .reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.contact-container .reviews .href-reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border: 2px solid #522e93;
+  border-radius: 20px;
+}
+.contact-container .reviews .href-reviews h2 {
+  margin: 10px;
+  color: #c6b241;
+}
+.contact-container .reviews .href-reviews a {
+  margin: 20px;
+}
+.contact-container .reviews .href-reviews img:nth-of-type(1) {
+  border-radius: 10px;
+}
+.contact-container .map {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact-container .map .map-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.contact-container .map .map-text p {
+  margin-top: -5px;
+  text-align: left;
+}
+.contact-container .map .map-text .map-text_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.contact-container .map .map-text .map-text_list ul {
+  list-style-type: none;
+  color: #c6b241;
+  text-align: center;
+  line-height: 30px;
+}
+.contact-container .map .map-text .map-text_list .time-list {
+  color: #c6b241;
+  margin-left: 50px;
+}
+.contact-container .map .map-text .map-text_list .time-list .time-list_two {
+  position: absolute;
+  margin-top: 30px;
+  line-height: 44px;
+}/*# sourceMappingURL=style.css.map */

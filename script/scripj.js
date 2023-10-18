@@ -37,6 +37,8 @@ menuBtn.addEventListener('click', () =>{
 const pOne = document.querySelector('.table_p-one');
 const pTwo = document.querySelector('.table_p-two');
 const pThree = document.querySelector('.table_p-three');
+const pFour = document.querySelector('.table_p-four');
+const pFive = document.querySelector('.table_p-five');
 
 const clickOne = document.querySelector('#clickOne').addEventListener('click', ()=>{
   pOne.classList.toggle('activeOne');
@@ -53,6 +55,31 @@ const clickThree = document.querySelector('#clickThree').addEventListener('click
   pTwo.classList.remove('activeTwo');
   pOne.classList.remove('activeOne');
 })
+const clickFour = document.querySelector('#clickFour').addEventListener('click', ()=>{
+  pFour.classList.toggle('activeFour');
+  pOne.classList.remove('activeOne');
+  pTwo.classList.remove('activeTwo');
+  pThree.classList.remove('activeThree');
+  pFive.classList.remove('activeFive');
+})
+const clickFive = document.querySelector('#clickFive').addEventListener('click', ()=>{
+  pFour.classList.remove('activeFour');
+  pOne.classList.remove('activeOne');
+  pTwo.classList.remove('activeTwo');
+  pThree.classList.remove('activeThree');
+  pFive.classList.toggle('activeFive');
+})
+
+const blockPrice = document.querySelector('.block-price_more');
+const buttonPrice = document.querySelector('.block-price_button')
+buttonPrice.addEventListener('click', ()=>{
+  if(blockPrice.classList.toggle('blockpriceActive')){
+    buttonPrice.textContent = 'Скрыть';
+  }else{
+    buttonPrice.textContent = 'Посмотреть';
+  };
+})
+
 
 
 

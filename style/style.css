@@ -100,6 +100,9 @@ body main .swiper-slide details {
   font-size: 35px;
   cursor: pointer;
 }
+body main .swiper-slide details summary {
+  list-style: none;
+}
 body main .swiper-slide p {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -270,7 +273,6 @@ body .container-price .block-price .block-price_table table tr td:nth-of-type(1)
 }
 body .container-price .block-price .block-price_table table tr td:nth-of-type(2) {
   width: 100px;
-  text-align: left;
 }
 body .container-price .block-price .block-price_table table tr td:nth-of-type(3) {
   width: 150px;
@@ -280,6 +282,67 @@ body .container-price .block-price .block-price_table table tr td p {
   font-size: 20px;
   color: #cdcdcd;
   line-height: 30px;
+}
+body .container-price .block-price .block-price_button_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container-price .block-price .block-price_button_flex .block-price_button {
+  background-color: #47026c;
+  border: none;
+  color: #c6b241;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+body .container-price .block-price .block-price_button_flex .block-price_button:hover {
+  background-color: black;
+}
+body .container-price .block-price .block-price_more.blockpriceActive {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: buttonClick 1s ease-in;
+          animation: buttonClick 1s ease-in;
+}
+body .container-price .block-price .block-price_more {
+  display: none;
+  margin-top: 50px;
+  color: #c6b241;
+}
+body .container-price .block-price .block-price_more h3 {
+  margin-left: 22px;
+}
+body .container-price .block-price .block-price_more .list-price_prog li {
+  margin: 27px;
+  color: #cdcdcd;
+}
+body .container-price .block-price .block-price_more .list-price_prog li span {
+  color: #c6b241;
+  font-weight: 600;
+}
+body .container-price .block-price .block-price_more .list-price_complect li {
+  color: #cdcdcd;
+  font-size: 18px;
+  margin: 10px;
+}
+body .container-price .block-price .block-price_more .list-price_complect li span {
+  color: #c6b241;
+  font-weight: 600;
+}
+body .container-price .block-price .block-price_more .list-price_obslug li {
+  color: #cdcdcd;
+  font-size: 18px;
+  margin: 27px;
+}
+body .container-price .block-price .block-price_more .list-price_obslug li span {
+  color: #c6b241;
+  font-weight: 600;
 }
 
 .active {
@@ -322,8 +385,34 @@ footer .icon a:nth-of-type(2) {
   font-size: 10px;
   margin-left: 60%;
 }
+footer .myBlog {
+  font-size: 13px;
+  text-align: center;
+}
+footer .myBlog a {
+  text-decoration: none;
+  color: #cdcdcd;
+  margin: 5px;
+}
 
-#clickOne, #clickTwo, #clickThree {
+@-webkit-keyframes buttonClick {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#clickOne, #clickTwo, #clickThree, #clickFour, #clickFive {
   display: none;
 }
 

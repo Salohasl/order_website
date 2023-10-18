@@ -105,6 +105,9 @@ background: linear-gradient(180deg, rgb(71, 2, 108), rgb(0, 0, 0) 100%);
         font-weight: 900;
         font-size: 35px;
         cursor: pointer;
+        summary{
+          list-style: none;
+        }
       }
       p{
         background-color: rgba(0, 0, 0, 0.4);
@@ -262,11 +265,10 @@ background: linear-gradient(180deg, rgb(71, 2, 108), rgb(0, 0, 0) 100%);
               padding: 5px;
               &:nth-of-type(1){
                 width: 60%;
-                
               }
               &:nth-of-type(2){
                 width: 100px;
-                text-align: left;
+                
               }
               &:nth-of-type(3){
                 width: 150px;
@@ -277,6 +279,73 @@ background: linear-gradient(180deg, rgb(71, 2, 108), rgb(0, 0, 0) 100%);
                 color: #cdcdcd;
                 line-height: 30px;
               }
+            }
+          }
+        }
+      }
+      .block-price_button_flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .block-price_button{
+          background-color: #47026c;
+          border: none;
+          color: #c6b241;
+          width: 200px;
+          height: 60px;
+          font-size: 20px;
+          border-radius: 20px;
+          
+          cursor: pointer;
+          &:hover{
+            background-color: black;
+          }
+        }
+      }
+      .block-price_more.blockpriceActive{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        animation: buttonClick 1s ease-in;
+      }
+      .block-price_more{
+        display: none;
+        margin-top: 50px;
+        color: #c6b241;
+        h3{
+          margin-left: 22px;
+        }
+        .list-price_prog{
+          li{
+            margin: 27px;
+            color: #cdcdcd;
+            span{
+              color: #c6b241;
+              font-weight: 600;
+            }
+          }
+        }
+        .list-price_complect{
+          li{
+            color: #cdcdcd;
+            font-size: 18px;
+            margin: 10px;
+            span{
+              color: #c6b241;
+              font-weight: 600;
+            }
+          }
+        }
+        .list-price_obslug{
+          li{
+            color: #cdcdcd;
+            font-size: 18px;
+            margin: 27px;
+            span{
+              color: #c6b241;
+              font-weight: 600;
             }
           }
         }
@@ -327,9 +396,25 @@ footer{
       }
     }
   }
+  .myBlog{
+    font-size: 13px;
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: #cdcdcd;
+      margin: 5px;
+    }
+  }
 }
-
-#clickOne, #clickTwo, #clickThree{display: none;}
+@keyframes buttonClick {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+#clickOne, #clickTwo, #clickThree,#clickFour,#clickFive{display: none;}
 
   //Кнопка всплытия SVG
 .btn-up {
@@ -406,4 +491,3 @@ footer{
   top: calc(50% + 5px);
 }
 
-  

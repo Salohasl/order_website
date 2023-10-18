@@ -6,22 +6,24 @@
 <meta name="HandheldFriendly" content="true" >
 <meta name="MobileOptimized" content="width">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>NetRunner Store</title>
+<title>NetRunner PC</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="description" content="Веб-разработчик, это не просто слова, это человек, который может решит любую проблему. Именно Я Веб разраотчик Максим, сделаю вам самый шикарный сайт и даю вам гарантию после любой моей работы!" />
-<link rel="shortcut icon" href="">
+<meta name="keywords" content="конфигуратор ПК, Купить ПК, купить пк онлайн, собрать пк, собрать пк Калининград, ремонт компьютеров, ремонт ПК, сборка компьютеров" />
+<meta name="description" content="Подберем по вашему бюджету ПК. Только у нас самые лучшие цены и за каждую свою работу даем гарантию!!" />
+<link rel="shortcut icon" href="/icon/icon.png">
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/style/normalize.css">
 <link rel="stylesheet" href="/style/media.css">
+<link rel="stylesheet" href="/configStyle/scss.css">
+<link rel="stylesheet" href="/contactStyle/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nanum+Myeongjo&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <header>
-  <h1>NetRunner Store</h1>
+  <h1>NetRunner PC</h1>
   <div class="media-flex">
     <nav class="nav">
         <li><a href="/index.html" class="active">Главная</a></li>
@@ -31,7 +33,7 @@
     </nav>
     <div class="icon">
       <span><a href="tel:+79521172318"><img class="phone_elem" src="/icon/phone.png" width="35px" height="35px"><i class="phone">+7(952)117-23-18</i></a></span>
-      <a class="telega" href="#"><img src="/icon/telega.png" width="35px" height="35px"></a>
+      <a class="telega" href="https://t.me/nr714"><img src="/icon/telega.png" width="35px" height="35px"></a>
     </div>
   </div>
   
@@ -52,38 +54,37 @@
       <div class="swiper-slide">
         <details>
           <summary>ПОДБОР КОМПЛЕКТУЮЩИХ</summary>
-          <p>Подберем оптимальные комплектующие, согласно вашим задачам и бюджету</p>
+          <p>Подберем оптимальную систему, подходящую под Ваши задачи и бюджет.</p>
         </details>
         <img src="/img/slide1.jpg" height="600px">
       </div>
       <div class="swiper-slide">
         <details>
           <summary>СБОРКА ПК</summary>
-          <p>Сборка в специально оборудованном помещении,
-            <br>с использованием высококачественной термопасты
-            <br>и многоразовых стяжек
+          <p>Обеспечим качественный продув в корпусе для поддержания низких температур при работе. 
+          <br>  Организуем кабельменеджмент для удобства обслуживания ПК.
           </p>
         </details>
         <img src="/img/slide2.jpg" height="600px">
       </div>
       <div class="swiper-slide">
         <details>
-          <summary>КАБЕЛЬМЕНЕДЖМЕНТ</summary>
-          <p>Тут какая то строка и что то еще......</p>
+          <summary>ЗАКАЗ ТОВАРА</summary>
+          <p>Работаем с проверенными поставщиками. <br> Предоставляем гарантию на каждую комплектующую</p>
         </details>
         <img src="/img/slide3.jpg" height="600px">
       </div>
       <div class="swiper-slide">
         <details>
           <summary>УСТАНОВКА ПО И ТЕСТИРОВАНИЕ</summary>
-          <p>Тут какая то строка и что то еще......</p>
+          <p>Установим все необходимые Вам программы <br> и проверим стабильность системы при помощи стресс-тестов.</p>
         </details>
         <img src="/img/slide4.jpg" height="600px">
       </div>
       <div class="swiper-slide">
         <details>
           <summary>ДОСТАВКА ДО ДВЕРИ</summary>
-          <p>Тут какая то строка и что то еще......</p>
+          <p>Привезем готовый ПК к Вам домой и поможем подключить.</p>
         </details>
         <img src="/img/slide5.jpg" height="600px">
       </div>
@@ -109,47 +110,51 @@
     pagination-clickable="true" navigation="true">
     <swiper-slide data-hash=" slide1">
       <div class="swiper-slide_column">
-        <h2>Игровой ПК</h2>
-        <p>Процессор:...
-          <br>Видеокарта:...
-          <br>Память:...
-          <br>Цена:...
+        <h2>Начальный игровой ПК</h2>
+        <p>Процессор: Intel Core i3-12100
+          <br>Видеокарта: GeForce RTX 3050 8 GB
+          <br>Оперативная память: 16 GB
+          <br> SSD: 512 GB
+          <br> Цена: 60 000 рублей
         </p>
       </div>
-      <img src="/img/swipe1.jpg" height="600px" width="500px">
+      <img src="/img/gamePC.jpg" height="600px" width="500px">
     </swiper-slide>
     <swiper-slide data-hash="slide2">
       <div class="swiper-slide_column">
-        <h2>ПК для работы</h2>
-        <p>Процессор:...
-          <br>Видеокарта:...
-          <br>Память:...
-          <br>Цена:...
+        <h2>Популярный игровой ПК</h2>
+        <p>Процессор: Intel Core i5-12400
+          <br>Видеокарта: GeForce RTX 3060 12 GB
+          <br>Оперативная память: 32 GB
+          <br>SSD: 1 TB
+          <br>Цена:85 000 рублей
         </p>
       </div>
-      <img src="/img/swipe2.jpg" height="600px" width="500px">
+      <img src="/img/profgamePC.jpg" height="600px" width="500px">
     </swiper-slide>
     <swiper-slide data-hash="slide3">
       <div class="swiper-slide_column">
-        <h2>Игровой ПК</h2>
-        <p>Процессор:...
-          <br>Видеокарта:...
-          <br>Память:...
-          <br>Цена:...
+        <h2>Профессиональные решения</h2>
+        <p>Процессор: Intel Core i7-12700
+          <br>Видеокарта: GeForce RTX 4070 Ti
+          <br>Оперативная память: 64 GB
+          <br>SSD: 2 TB
+          <br>Цена: 160 000 рублей
         </p>
       </div>
-      <img src="/img/swipe3.jpg" height="600px" width="500px">
+      <img src="/img/profPC.jpg" height="600px" width="500px">
     </swiper-slide>
     <swiper-slide data-hash="slide4">
       <div class="swiper-slide_column">
-        <h2>Игровой ПК</h2>
-        <p>Процессор:...
-          <br>Видеокарта:...
-          <br>Память:...
-          <br>Цена:...
+        <h2>Подберем ПК под ваш бюджет</h2>
+        <p>Процессор: индивидуально
+          <br>Видеокарта: индивидуально
+          <br>Оперативная память: индивидуально
+          <br>SSD: индивидуально
+          <br>Цена: от 50 000 рублей
         </p>
       </div>
-      <img src="/img/swipe4.jpg" height="600px" width="500px">
+      <img src="/img/nonePC.jpg" height="600px" width="500px">
     </swiper-slide>
   </swiper-container>
   </div>
@@ -159,10 +164,12 @@
   <footer class="footer">
     <div class="icon">
       <span><a href="tel:+79521172318"><img class="phone_elem" src="/icon/phone.png" width="35px" height="35px"><i class="phone">+7(952)117-23-18</i></a></span>
-      <a href="#"><img src="/icon/telega.png" width="35px" height="35px"></a>
+      <a href="https://t.me/nr714"><img src="/icon/telega.png" width="35px" height="35px"></a>
       <img src="/icon/gps.png" width="40px" height="40px">
       <p>Калининград</p>
-      <a href="/politika.html">Политика конфиденциальности</a>
+    </div>
+    <div class="myBlog">
+      <a href="https://github.com/Salohasl" target="_blank" title="Профиль">WebDev: Maxim</a>
     </div>
   </footer>
 <script src="/script/scripj.js"></script>

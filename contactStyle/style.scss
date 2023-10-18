@@ -1,0 +1,101 @@
+@keyframes  contectDisplay{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.contact-container{
+    animation: contectDisplay 1s ease-in;
+    padding-top: 100px;
+    h1{
+        font-weight: 100;
+        text-align: center;
+        color: #c6b241;
+        a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+    }
+    p{
+        margin-top: 50px;
+        text-align: center;
+        color: #c6b241;
+        line-height: 25px;
+        font-size: 18px;
+    }
+    hr{
+       border: 1px solid #522e93;
+       margin-top: 50px;
+    }
+    .reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        .href-reviews{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border: 2px solid #522e93;
+            border-radius: 20px;
+           h2{
+            margin: 10px;
+            color: #c6b241;
+           }
+            a{
+                margin: 20px;
+            }
+            img{
+                &:nth-of-type(1){
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .map{
+        margin: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .map-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 40px;
+            margin-top: 30px;
+            p{
+                margin-top: -5px;
+                text-align: left;
+            }
+            .map-text_list{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 70px;
+                ul{
+                    list-style-type: none;
+                    color: #c6b241;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                .time-list{
+                    color: #c6b241;
+                    margin-left: 50px;
+                    .time-list_two{
+                        position: absolute;
+                        margin-top: 30px;
+                        line-height: 44px;
+                    }
+                }
+            }
+        }
+    }
+}

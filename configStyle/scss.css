@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   font-family: "Lora", serif;
@@ -10,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-main {
+main .container-config {
   padding-top: 100px;
 }
 main .container-config h2 {
@@ -18,4 +19,361 @@ main .container-config h2 {
   font-weight: 300;
   text-align: center;
   color: #c6b241;
+}
+main .container-config .config {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .container-config .config .config-select_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+main .container-config .config .config-select_left label {
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+main .container-config .config .config-select_left select {
+  text-align: center;
+  color: #c6b241;
+  background-color: #522e93;
+  border: none;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 90%;
+  cursor: pointer;
+}
+main .container-config .config img {
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+}
+main .container-config .config .config-select_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+}
+main .container-config .config .config-select_right .video-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container-config .config .config-select_right .video-card label {
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+main .container-config .config .config-select_right .video-card select {
+  text-align: center;
+  color: #c6b241;
+  background-color: #522e93;
+  border: none;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+main .container-config .config .config-select_right .select-nvidia {
+  display: none;
+}
+main .container-config .config .config-select_right .select-nvidia label {
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+main .container-config .config .config-select_right .select-nvidia select {
+  text-align: center;
+  color: #c6b241;
+  background-color: #522e93;
+  border: none;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 90%;
+  cursor: pointer;
+}
+main .container-config .config .config-select_right .select-nvidia.activeNvidia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: selectUp 1s ease-in;
+          animation: selectUp 1s ease-in;
+}
+main .container-config .config .config-select_right .select-amd {
+  display: none;
+}
+main .container-config .config .config-select_right .select-amd label {
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+main .container-config .config .config-select_right .select-amd select {
+  text-align: center;
+  color: #c6b241;
+  background-color: #522e93;
+  border: none;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 90%;
+  cursor: pointer;
+}
+main .container-config .config .config-select_right .select-amd.activeAmd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: selectUp 1s ease-in;
+          animation: selectUp 1s ease-in;
+}
+main .container-config .config .config-select_right .select-intel {
+  display: none;
+}
+main .container-config .config .config-select_right .select-intel label {
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+main .container-config .config .config-select_right .select-intel select {
+  text-align: center;
+  color: #c6b241;
+  background-color: #522e93;
+  border: none;
+  margin: 20px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 90%;
+  cursor: pointer;
+}
+main .container-config .config .config-select_right .select-intel.activeIntel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: selectUp 1s ease-in;
+          animation: selectUp 1s ease-in;
+}
+main .container-config .priceResult {
+  text-align: center;
+  color: #c6b241;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+main .container-config .priceResult span {
+  color: #e9ecef;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+main .container-config h1 {
+  color: #c6b241;
+  text-align: center;
+  font-weight: 200;
+  font-size: 35px;
+  margin-top: 100px;
+}
+main .container-config .config-checkbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c6b241;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne h3 {
+  color: #c6b241;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne label {
+  color: #c6b241;
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne .checkboxEit-color {
+  color: darkgray;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne .checkboxEit-color.yellow {
+  color: #c6b241;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne .checkboxstyle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+main .container-config .config-checkbox .config-checkbox_blockOne hr {
+  border: 1px solid #522e93;
+}
+main .container-config .config-checkbox .config-checkbox_blockTwo {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c6b241;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+main .container-config .config-checkbox .config-checkbox_blockTwo h3 {
+  color: #c6b241;
+}
+main .container-config .config-checkbox .config-checkbox_blockTwo label {
+  color: #c6b241;
+  color: #c6b241;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+main .container-config .config-checkbox .config-checkbox_blockTwo .checkboxstyle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+main .container-config .config-checkbox .config-checkbox_blockTwo hr {
+  border: 1px solid #522e93;
+}
+main .container-config .config-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+main .container-config .config-button .configButton {
+  margin-bottom: 30px;
+  background-color: #522e93;
+  height: 60px;
+  width: 200px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: #c6b241;
+  font-size: 20px;
+}
+main .container-config .config-button .configButton:hover {
+  box-shadow: inset 1px 1px 15px black;
+}
+main .container-config .config-button a {
+  text-decoration: none;
+}
+main .container-config .config-button a button {
+  background-color: #522e93;
+  border: none;
+  border-radius: 20px;
+  height: 60px;
+  width: 250px;
+  cursor: pointer;
+  color: #c6b241;
+  font-size: 20px;
+}
+main .container-config .config-button p {
+  color: #e9ecef;
+  margin: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.checkboxstyle + label {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.checkboxstyle + label::before {
+  cursor: pointer;
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #522e93;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.checkboxstyle:checked + label::before {
+  border-color: #522e93;
+  background-color: #522e93;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили при наведении курсора на checkbox */
+.checkboxstyle:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #c6b241;
+}
+
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.checkboxstyle:not(:disabled):active + label::before {
+  background-color: #522e93;
+  border-color: #522e93;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.checkboxstyle:focus + label::before {
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.checkboxstyle:focus:not(:checked) + label::before {
+  border-color: #522e93;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.checkboxstyle:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+@-webkit-keyframes selectUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes selectUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=scss.css.map */

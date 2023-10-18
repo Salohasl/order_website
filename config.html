@@ -6,36 +6,35 @@
 <meta name="HandheldFriendly" content="true" >
 <meta name="MobileOptimized" content="width">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Конфигуратор компьютера</title>
+<title>NetRunner PC "Конфигуратор ПК"</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="description" content="Веб-разработчик, это не просто слова, это человек, который может решит любую проблему. Именно Я Веб разраотчик Максим, сделаю вам самый шикарный сайт и даю вам гарантию после любой моей работы!" />
-<link rel="shortcut icon" href="">
+<meta name="keywords" content="конфигуратор ПК, Купить ПК, купить пк онлайн, собрать пк, собрать пк Калининград, ремонт компьютеров, ремонт ПК, сборка компьютеров" />
+<meta name="description" content="Подберем по вашему бюджету ПК. Только у нас самые лучшие цены и за каждую свою работу даем гарантию!!" />
+<link rel="shortcut icon" href="/icon/icon.png">
 <link rel="stylesheet" href="/style/style.css">
 <link rel="stylesheet" href="/style/normalize.css">
 <link rel="stylesheet" href="/style/media.css">
 <link rel="stylesheet" href="/configStyle/scss.css">
+<link rel="stylesheet" href="/contactStyle/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nanum+Myeongjo&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Quicksand&display=swap" rel="stylesheet">
 </head>
 <header>
-  <h1>NetRunner Store</h1>
-  <nav class="nav">
-    <ul>
-      <li><a href="/index.html">Главная</a></li>
-      <li><a href="/price.html">Прайс-лист</a></li>
-      <li><a href="/config.html"class="active">Конфигуратор</a></li>
-      <li><a href="#">О нас</a></li>
-    </ul>
-  </nav>
-  <div class="icon">
-    <p>+7(978)234-23-23</p>
-    <a href="#"><img src="/icon/telega.png" width="35px" height="35px"></a>
-    <img src="/icon/gps.png" width="40px" height="40px">
-    <p>Калининград</p>
+  <h1>NetRunner PC</h1>
+  <div class="media-flex">
+    <nav class="nav">
+        <li><a href="/index.html">Главная</a></li>
+        <li><a href="/price.html">Прайс-лист</a></li>
+        <li><a href="/config.html" class="active">Конфигуратор</a></li>
+        <li><a href="/contact.html">О нас</a></li>
+    </nav>
+    <div class="icon">
+      <span><a href="tel:+79521172318"><img class="phone_elem" src="/icon/phone.png" width="35px" height="35px"><i class="phone">+7(952)117-23-18</i></a></span>
+      <a class="telega" href="https://t.me/nr714"><img src="/icon/telega.png" width="35px" height="35px"></a>
+    </div>
   </div>
   
   <div class="menuBtn">
@@ -45,28 +44,284 @@
   </div>
 </header>
 
+<link rel="stylesheet" href="/feedback/css/form-processing.css">
 <body>
     <div class="btn-up btn-up_hide"></div>
   <main>
     <div class="container-config">
       <h2>СОБЕРИ СВОЙ ПК</h2>
-      
+      <div class="config">
+        <div class="config-select_left">
+          <label for="cpu">Процессор</label>
+          <select name="" id="cpu" class="cpu">
+            <option selected>Не выбрано</option>
+            <option value="6500" id="price">Intel Core i3 (LGA 1200)</option>
+            <option value="22600"id="price">Intel Core i7 (LGA 1200)</option>
+            <option value="34000"id="price">Intel Core i9 (LGA 1200)</option>
+            <option value="10000"id="price">Intel Core i3 (LGA 1700)</option>
+            <option value="17000"id="price">Intel Core i5 (LGA 1700)</option>
+            <option value="28000"id="price">Intel Core i7 (LGA 1700)</option>
+            <option value="45000"id="price">Intel Core i9 (LGA 1700)</option>
+            <option value="9000"id="price">AMD Ryzen 3 (AM4)</option>
+            <option value="15000"id="price">AMD Ryzen 5 (AM4)</option>
+            <option value="20000"id="price">AMD Ryzen 7 (AM4)</option>
+            <option value="37000"id="price">AMD Ryzen 9 (AM4)</option>
+            <option value="34000"id="price">AMD Ryzen 5 (AM5)</option>
+            <option value="43000"id="price">AMD Ryzen 7 (AM5)</option>
+            <option value="50000"id="price">AMD Ryzen 9 (AM5)</option>
+          </select>
+          <label for="ram">Оперативная память</label>
+          <select name="" id="ram" class="ram">
+            <option selected>Не выбрано</option>
+            <option value="3750">DDR 4 – 16 GB (2 х 8 GB)</option>
+            <option value="6600">DDR 4 – 32 GB (2 х 16 GB)</option>
+            <option value="13800">DDR 4 – 64 GB (2 х 32 GB)</option>
+            <option value="9100">DDR 5 – 16 GB (2 х 8 GB)</option>
+            <option value="12400">DDR 5 – 32 GB (2 х 16 GB)</option>
+            <option value="22500">DDR 5 – 64 GB (2 х 32 GB)</option>
+          </select>
+          <label for="ssd">SSD</label>
+          <select name="" id="ssd" class="ssd">
+            <option selected>Не выбрано</option>
+            <option value="1500">M.2 NVME 128 GB</option>
+            <option value="2000">M.2 NVME 256 GB</option>
+            <option value="3000">M.2 NVME 512 GB</option>
+            <option value="5000">M.2 NVME 1024 GB</option>
+            <option value="9000">M.2 NVME 2048 GB</option>
+          </select>
+        </div>
+        <img src="/img/configPK.jpg" alt="PK" width="400px" height="400px">
+
+        <div class="config-select_right">
+
+          <div class="video-card">
+            <label for="video-card">Видеокарта</label>
+            <select name="" id="video-card">
+              <option selected>Не выбрано</option>
+              <option value="NVIDIA">NVIDIA</option>
+              <option value="AMD">AMD</option>
+              <option value="INTEL">INTEL</option>
+            </select>
+          </div>
+
+          <div class="select-nvidia">
+            <label for="nvidia">Видеокарта NVIDIA</label>
+            <select name="" id="nvidia">
+              <option selected>Не выбрано</option>
+              <option value="28000">NVIDIA RTX 3050 8GB</option>
+              <option value="35000">NVIDIA RTX 3060 8GB</option>
+              <option value="37000">NVIDIA RTX 3060 12GB</option>
+              <option value="42000">NVIDIA RTX 3060 Ti 8GB</option>
+              <option value="49000">NVIDIA RTX 3070 8GB</option>
+              <option value="58000">NVIDIA RTX 3070 Ti 8GB</option>
+              <option value="false">NVIDIA RTX 3080 10GB</option>
+              <option value="157000">NVIDIA RTX 3080 Ti 12GB</option>
+              <option value="false">NVIDIA RTX 3090 24 GB</option>
+              <option value="false">NVIDIA RTX 3090 Ti 24 GB</option>
+              <option value="38000">NVIDIA RTX 4060 8 GB</option>
+              <option value="48000">NVIDIA RTX 4060 Ti 8GB</option>
+              <option value="62000">NVIDIA RTX 4060 Ti 16GB</option>
+              <option value="74000">NVIDIA RTX 4070 12GB</option>
+              <option value="95000">NVIDIA RTX 4070 Ti 12GB</option>
+              <option value="130000">NVIDIA RTX 4080 16GB</option>
+              <option value="190000">NVIDIA RTX 4090 24GB</option>
+            </select>
+          </div>
+
+          <div class="select-amd">
+            <label for="amd">Видеокарта AMD</label>
+            <select name="" id="amd">
+              <option selected>Не выбрано</option>
+              <option value="13500">AMD RX 6400 4GB</option>
+              <option value="20000">AMD RX 6500 XT 4GB</option>
+              <option value="27000">AMD RX 6600 8GB</option>
+              <option value="29500">AMD RX 6600 XT 8GB</option>
+              <option value="31000">AMD RX 6650 XT 8GB</option>
+              <option value="41000">AMD RX 6700 XT 12GB</option>
+              <option value="50000">AMD RX 6750 XT 12GB</option>
+              <option value="80000">AMD RX 6900 XT 16GB</option>
+              <option value="31000">AMD RX 7600 8GB</option>
+              <option value="59000">AMD RX 7700 XT 12GB</option>
+              <option value="65000">AMD RX 7800 XT 16GB</option>
+              <option value="95000">AMD RX 7900 XT 20GB</option>
+              <option value="116000">AMD RX 7900 XTX 24GB</option>
+            </select>
+          </div>
+
+          <div class="select-intel">
+            <label for="intel">Видеокарта Intel</label>
+            <select name="" id="intel">
+              <option selected>Не выбрано</option>
+              <option value="false">Товар отсутствует</option>
+            </select>
+          </div>
+
+        </div>
+      </div>
+      <div class="priceResult">Итоговая цена: <span id="result">узнать</span></div>
+      <h1>Дополнительно к сборке</h1>
+      <div class="config-checkbox">
+        <div class="config-checkbox_blockOne">
+          <h3>Наличие подсветки</h3>
+          <input type="checkbox" name="" id="checkboxOne" class="checkboxstyle">
+          <label for="checkboxOne" class="checkboxOne-color">Подсветка вентилятора + 500р</label>
+
+          <input type="checkbox" name="" id="checkboxTwo" class="checkboxstyle">
+          <label for="checkboxTwo" class="checkboxTwo-color">Подсветка оперативной памяти + 500р</label>
+          
+          <input type="checkbox" name="" id="checkboxThree" class="checkboxstyle">
+          <label for="checkboxThree" class="checkboxThree-color">Подсветка системы охлаждения + 500р</label>
+
+          <input type="checkbox"  name="" id="checkboxEit" data-priceEit="500" class="checkboxstyle">
+          <label for="checkboxEit" class="checkboxEit-color">Синхронизация подсветки всех устройств + 500р</label>
+        </div>
+        <div class="config-checkbox_blockTwo">
+          <h3>Кастомизация</h3>
+          <input type="checkbox" name="" id="checkboxFour" class="checkboxstyle">
+          <label for="checkboxFour" class="checkboxFour-color">Наличие стекла на боковой крышке корпуса + 500р</label>
+
+          <input type="checkbox" name="" id="checkboxFive" class="checkboxstyle">
+          <label for="checkboxFive" class="checkboxFive-color">Модульный блок питания + 500р</label>
+
+          <input type="checkbox" name="" id="checkboxSix" class="checkboxstyle">
+          <label for="checkboxSix" class="checkboxSix-color">Оплетка проводов блока питания + 500р</label>
+
+          <input type="checkbox" name="" id="checkboxSeven" data-priceSeven="500" class="checkboxstyle">
+          <label for="checkboxSeven" class="checkboxSeven-color">Улучшенный кабельменеджмент + 500р</label>
+        </div>
+      </div>
+      <div class="config-button">
+        <button id="configButton" class="configButton">Заказать</button>
+        <a href="https://t.me/nr714" target="_blank"><button>Остались вопрос?</button></a>
+        <p>Информация о ценах товара и комплектации указанная на сайте не является офертой,<br> определяемом положениями ст. 435 Гражданского Кодекса РФ</p>
+      </div>
     </div>
+
   </main>
 
+  <div class="container" id="hrefContainer">
+    <h1 class="zagolovok">Ваш заказ</h1>
+
+    <div class="form-container form__wrapper">
+
+      <button class="close-form">Закрыть</button>
+      <!-- Форма обратной связи -->
+      <form id="feedback-form" action="/feedback/form-processing.php" enctype="multipart/form-data" novalidate>
+        <div class="form-row">
+          <!-- Имя пользователя -->
+          <div class="form-group">
+            <label for="name" class="control-label">Имя</label>
+            <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2"
+              maxlength="30" required="required">
+            <div class="invalid-feedback"></div>
+          </div>
+          <!-- Email пользователя -->
+          <div class="form-group">
+            <label for="email" class="control-label">Email-адрес</label>
+            <input id="email" type="email" name="email" required="required" class="form-control" value=""
+              placeholder="Email-адрес">
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <hr>
+        <!-- ЗАКАЗ ПОЛЬЗОВАТЕЛЯ -->
+        <div class="form-group">
+          <label for="message" class="control-label">Ваш заказ</label>
+          <textarea id="message" name="message" class="form-control" rows="3"
+            placeholder="Пусто" minlength="20" maxlength="500"
+            required="required" disabled></textarea>
+          <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- ЗАКАЗ ПОЛЬЗОВАТЕЛЯ ДОП УСЛУГ Подсветка-->
+        <h1>Дополнительно подсветка</h1>
+        <div class="form-group">
+          <label for="service" class="control-label">По желанию можете удалить лишнее</label>
+          <textarea id="service" name="service" class="form-control" rows="3"
+            placeholder="Пусто" minlength="20" maxlength="500"
+            required="required"></textarea>
+          <div class="invalid-feedback"></div>
+        </div>
+        
+        <!-- ЗАКАЗ ПОЛЬЗОВАТЕЛЯ ДОП УСЛУГ Кастомизация     ДОБАВИТЬ В ФОРМУ-->
+        <h1>Дополнительно кастомизация</h1>
+        <div class="form-group">
+          <label for="castom" class="control-label">По желанию можете удалить лишнее</label>
+          <textarea id="castom" name="castom" class="form-control" rows="3"
+            placeholder="Пусто" minlength="20" maxlength="500"
+            required="required"></textarea>
+          <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- Пользовательское солашение -->
+        <div class="form-group form-agree form-check">
+          <input class="form-check-input" type="checkbox" name="agree" id="agree" required value="true">
+          <label class="form-check-label" for="agree">Нажимая кнопку, я принимаю условия <a href="/politika.html" target="_blank">Пользовательского
+              соглашения</a> <br> и даю своё согласие на обработку моих персональных данных</label>
+          <div class="invalid-feedback"></div>
+        </div>
+
+        <!-- Сообщение об ошибке -->
+        <div class="form-error form-error_hide">Исправьте данные и отправьте форму ещё раз.</div>
+
+        <!-- Кнопка для отправки формы на сервер -->
+        <div class="form-submit">
+          <button type="submit">Заказать</button>
+        </div>
+      </form>
+      
+      <!-- Сообщение об успешной отправки формы -->
+      <div class="form-success form-success_hide">
+        <div class="form-success__message">Заказ успешно отправлен. Нажмите <button type="button"
+            class="form-success__btn">здесь</button>, если нужно сделать еще заказ.</div>
+      </div>
+
+    </div>
+
+  </div>
+  <script>
+    /*
+      attachMaxItems: 3,
+      attachMaxFileSize: 128,
+      attachExt: ['png', 'jpg']
+    */
+
+    ItcSubmitForm.getOrCreateInstance('form');
+
+    document.addEventListener('itc.successSendForm', (e) => {
+      const el = e.target.closest('.form-container').querySelector('.form-success');
+      el.classList.remove('form-success_hide');
+    });
+
+    // при клике на .form-success__btn
+    document.querySelector('.form-success__btn').addEventListener('click', (e) => {
+      const el = e.target.closest('.form-container').querySelector('form');
+      const form = ItcSubmitForm.getOrCreateInstance(el);
+      form.reset();
+      e.target.closest('.form-container').querySelector('.form-success').classList.add('form-success_hide');
+    });
+
+  </script>
+<script src="/feedback/js/form-processing.js"></script>
 
   <footer class="footer">
     <div class="icon">
-      <p>+7(978)234-23-23</p>
-      <a href="#"><img src="/icon/telega.png" width="35px" height="35px"></a>
-      <a href="/politika.html">Политика конфиденциальности</a>
+      <span><a href="tel:+79521172318"><img class="phone_elem" src="/icon/phone.png" width="35px" height="35px"><i class="phone">+7(952)117-23-18</i></a></span>
+      <a href="https://t.me/nr714"><img src="/icon/telega.png" width="35px" height="35px"></a>
+      <img src="/icon/gps.png" width="40px" height="40px">
+      <p>Калининград</p>
+    </div>
+    <div class="myBlog">
+      <a href="https://github.com/Salohasl" target="_blank" title="Профиль">WebDev: Maxim</a>
     </div>
   </footer>
-    
+
+
 <script src="/script/scripj.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/script/slide.js"></script>
+<script src="/script/app.js"></script>
 </body>
 </html>
 
