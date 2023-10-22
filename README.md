@@ -20,3 +20,8 @@ The site was created from scratch (without design, everything was invented as we
   <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" title="Sass" alt="Sass" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VScode" alt="VScode" width="40" height="40"/>&nbsp;
 </div>
+
+---
+
+
+The JS code has been corrected and the content has been added; at the request of the customer there will not be the latest update
