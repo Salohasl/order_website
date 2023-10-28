@@ -1,9 +1,3 @@
-
-/// Отлавливание закрятия сайта
-/*window.onbeforeunload = function() {
-    return "Данные не сохранены. Точно перейти?";
-  };*/
-
 const videoCard = document.getElementById('video-card');      //Для показа видеокарт
 const blockNvidia = document.querySelector('.select-nvidia');
 const blockAmd = document.querySelector('.select-amd');            
@@ -48,9 +42,6 @@ function checkboxClear() {
             let set = new Set(checkboxArr);
             let res = [...new Set(checkboxArr)]
             service.textContent = res;
-        }else{ 
-            checkboxEit.checked = false;        
-            eitLabel.classList.remove('yellow');
         };
         
     }); 
@@ -60,40 +51,24 @@ function checkboxClear() {
             let set = new Set(checkboxArr);
             let res = [...new Set(checkboxArr)]
             service.textContent = res;
-        }else{
-            service.textContent = '' + oneLabel.textContent;
-            checkboxEit.checked = false;
-            eitLabel.classList.remove('yellow');
         };
         
     });
     checkboxThree.addEventListener('click',()=>{
         if(checkboxThree.checked == true){
-            checkboxArr.push(threeLabel.textContent);
-            let set = new Set(checkboxArr);
-            let res = [...new Set(checkboxArr)]
-            service.textContent = res;
-        }else{ 
-            checkboxEit.checked = false;
-            eitLabel.classList.remove('yellow');
-        };
-    });
-    checkboxEit.addEventListener('click', function clearckeched(){
-        if(checkboxOne.checked && checkboxTwo.checked && checkboxThree.checked){
-            eitLabel.classList.add('yellow');
             checkboxArr.push(eitLabel.textContent);
             let set = new Set(checkboxArr);
             let res = [...new Set(checkboxArr)]
             service.textContent = res;
-        }else{
-            alert('Выберите всю подсветку')
-            checkboxEit.checked = false;
-            eitLabel.classList.remove('yellow');
-            service.textContent = 'Для выбора в подсветке 4 пункта, нужно выбрать все';
         };
-        if(checkboxEit.checked == false){
-            service.textContent = 'Для выбора в подсветке 4 пункта, нужно выбрать все';
-        }
+    });
+    checkboxEit.addEventListener('click', function clearckeched(){
+        if(checkboxEit.checked == true){
+            checkboxArr.push(eitLabel.textContent);
+            let set = new Set(checkboxArr);
+            let res = [...new Set(checkboxArr)]
+            service.textContent = res;
+        };
     });
     return checkboxClear;
 };
@@ -152,7 +127,29 @@ function checkboxForm() {
 };
 checkboxForm();
 
+//ПОКАЗ ЗАКАЗА В ФОРМЕ ОТПРАВКИ;
+const message = document.getElementById('message');
 
+function textMessage(){
+    document.addEventListener("DOMContentLoaded",function(){
+
+        videoCard.addEventListener('change', function(){
+            if(videoCard.value === 'AMD'){
+                configButton.addEventListener('click',function(){
+                        message.textContent ='Процессор' + ' - ' + cpu.options[cpu.selectedIndex].textContent + '\n' + 'Оперативная память' + ' - ' + ram.options[ram.selectedIndex].textContent
+                        + '\n' +  'SSD' + ' - ' + ssd.options[ram.selectedIndex].textContent + '\n' +  'Видеокарта' + ' - ' + amd.options[amd.selectedIndex].textContent + '\n' + 'Дополнительные услуги';
+                });
+            };
+            if(videoCard.value === 'NVIDIA'){
+                configButton.addEventListener('click',function(){
+                        message.textContent = 'Процессор' + ' - ' + cpu.options[cpu.selectedIndex].textContent + '\n' +  'Оперативная память' + ' - ' + ram.options[ram.selectedIndex].textContent
+                        + '\n' + 'SSD' + ' - ' + ssd.options[ram.selectedIndex].textContent + '\n' +  'Видеокарта' + ' - ' + nvidia.options[nvidia.selectedIndex].textContent + '\n' + 'Дополнительные услуги';
+                });
+            };
+        });
+    return textMessage;
+});
+};textMessage();
 
 
 
@@ -164,73 +161,95 @@ const ssd = document.getElementById('ssd');
 
 const nvidia = document.getElementById('nvidia');
 const amd = document.getElementById('amd');
+const intel = document.getElementById('intel');
 const result = document.getElementById('result');
 
-function calculatorSelect(){
+    cpu.addEventListener('change', resultat);
+    ram.addEventListener('change', resultat);
+    ssd.addEventListener('change', resultat);
+    nvidia.addEventListener('change', resultat);
+    amd.addEventListener('change', resultat);
+    intel.addEventListener('change', resultat);
 
-    result.addEventListener('click', resultat);
-
-    function resultat(){
-        result.style.textDecoration ='none';
-        if(cpu.value == 'Не выбрано' && ram.value == 'Не выбрано' && ssd.value == 'Не выбрано' && videoCard.value =='Не выбрано'){
-            alert('Выберите все компоненты');
+function resultat(){
+        if(cpu.value == 'Не выбрано' || ram.value == 'Не выбрано' || ssd.value == 'Не выбрано' || videoCard.value =='Не выбрано'){
+            result.textContent = 'Выберите все компоненты'
         };
         cpu.addEventListener('change',()=>{
-            result.textContent = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
             if(cpu.value == 'Не выбрано'){
-                result.textContent = 'Выберите все...';
-                result.removeEventListener('click', resultat);
+                result.textContent = 'Выберите все компоненты';
             }
         });
         ram.addEventListener('change',()=>{
-            result.textContent = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
             if(ram.value == 'Не выбрано'){
-                result.textContent = 'Выберите все...';
-                result.removeEventListener('click', resultat);
+                result.textContent = 'Выберите все компоненты';
             }
         });
         ssd.addEventListener('change',()=>{
-            result.textContent = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
             if(ssd.value == 'Не выбрано'){
-                result.textContent = 'Выберите все...';
-                result.removeEventListener('click', resultat);
+                result.textContent = 'Выберите все компоненты';
             }
         });
         videoCard.addEventListener('change', ()=>{
-            if(videoCard.value === 'Не выбрано'){
-                result.textContent = 'Выберите все...';
-                result.removeEventListener('click', resultat);
+            if(videoCard.value == 'Не выбрано'){
+                result.textContent = 'Выберите все компоненты';
             };
-            if(videoCard.value === 'NVIDIA'){
-                nvidia.addEventListener('change', ()=>{
-                    result.textContent = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
-                    if(nvidia.value == 'Не выбрано'){
-                        result.textContent = 'Выберите все...';
-                        result.removeEventListener('click', resultat);
-                    }
-                })
-            };
-            if(videoCard.value === 'AMD'){
-                amd.addEventListener('change', ()=>{
-                    result.textContent = Number(amd.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
-                    if(amd.value == 'Не выбрано'){
-                        result.textContent = 'Выберите все...';
-                        result.removeEventListener('click', resultat);
-                    };
-                });
-            };
+            if(videoCard.value == 'NVIDIA'){
+                result.textContent = 'Выберите все компоненты';
+            }
+            if(videoCard.value == 'AMD'){
+                result.textContent = 'Выберите все компоненты';
+            }
+            if(videoCard.value == 'INTEL'){
+                result.textContent = 'Выберите все компоненты';
+            }
         });
-        if(videoCard.value == 'NVIDIA'){
-            result.textContent = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
+        if(videoCard.value === 'NVIDIA'){
+            nvidia.addEventListener('change', ()=>{
+            if(nvidia.value == 'Не выбрано'){
+                    result.textContent = 'Выберите все компоненты';
+                }else{
+                    amd.value = 'Не выбрано';
+                };
+            });
         };
-        if(videoCard.value == 'AMD'){
-            result.textContent = Number(amd.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
+        if(videoCard.value === 'AMD'){
+            result.textContent = 'Выберите все компоненты';
+            amd.addEventListener('change', ()=>{
+                if(amd.value == 'Не выбрано'){
+                    result.textContent = 'Выберите все компоненты';
+                }else{
+                    nvidia.value = 'Не выбрано';
+                };
+            });
         };
-        return resultat;
+        if(videoCard.value === 'INTEL'){
+            intel.addEventListener('change', ()=>{
+                if(intel.value == 'Не выбрано'){
+                    result.textContent = 'Товар модели Intel временно отсутствует';
+                };
+            });
+        };
+        let sum = 0;
+        if(videoCard.value === 'NVIDIA'){
+            amd.value = 'Не выбрано';
+            sum = Number(nvidia.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
+            result.textContent = 'Примерная цена:'+ ' ' + sum;
+            result.textContent = ( !isNaN(sum) && x && y ) ? sum : 'Выберите все компоненты';
+        };
+        if(videoCard.value === 'AMD'){
+            nvidia.value = 'Не выбрано';
+            sum = Number(amd.value) + Number(cpu.value) + Number(ram.value) + Number(ssd.value) + 16000;
+            result.textContent = 'Примерная цена:'+ ' ' + sum;
+            result.textContent = ( !isNaN(sum) && x && y ) ? sum : 'Выберите все компоненты';
+        };
+        if(videoCard.value === 'INTEL'){
+            result.textContent = 'Товар модели Intel временно отсутствует';
+            result.textContent = ( !isNaN(sum) && x && y ) ? sum : 'Выберите все компоненты';
+        };
+        return resultat; 
     };
-}calculatorSelect();
-
-
+   
 ///Всплытие ЗАКАЗА
 const configButton = document.getElementById('configButton');
 const container = document.querySelector('.container');
@@ -238,13 +257,13 @@ const containerConfig = document.querySelector('.container-config');
 
 configButton.addEventListener('click', ()=>{
    if(cpu.value == 'Не выбрано' || ram.value == 'Не выбрано' || ssd.value == 'Не выбрано' || videoCard.value =='Не выбрано' || result.textContent == 'Выберите все...'){
-        alert('Выберите все из выпадающего списка');
+        alert('Выберите все из выпадающего списка');     
+        window.scrollTo(0, 0);
     }else{
 
         if (confirm('Вы уверены в своем выборе?')) {
             alert('Оформите заявку и с вами свяжутся в ближайшее время');
             container.classList.add('activeContainer');
-            containerConfig.style.display = 'none';
             configButton.style.display ='none';
         } else {
             alert('Если есть вопросы, напишите или позвоните.' );
@@ -257,34 +276,7 @@ const closeForm = document.querySelector('.close-form');
 closeForm.addEventListener('click',()=>{
     container.classList.toggle('activeContainer');
     configButton.style.display ='block';
-    containerConfig.style.display = 'block';
-})
-//ПОКАЗ ЗАКАЗА В ФОРМЕ ОТПРАВКИ;
-const message = document.getElementById('message');
-
-function textMessage(){
-    document.addEventListener("DOMContentLoaded",function(){
-
-        videoCard.addEventListener('change', function(){
-            if(videoCard.value === 'AMD'){
-                configButton.addEventListener('click',function(){
-                    message.textContent = cpu.options[cpu.selectedIndex].text + ' , ' + ram.options[ram.selectedIndex].text
-                    + ' , ' + ssd.options[ram.selectedIndex].text + ' , ' + amd.options[amd.selectedIndex].text;
-                });
-            };
-            if(videoCard.value === 'NVIDIA'){
-                configButton.addEventListener('click',function(){
-                    message.textContent = cpu.options[cpu.selectedIndex].text + ' , ' + ram.options[ram.selectedIndex].text
-                    + ' , ' + ssd.options[ram.selectedIndex].text + ' , ' + nvidia.options[nvidia.selectedIndex].text;
-                });
-            };
-        });
-    return textMessage;
 });
-};textMessage();
-
-
-
 
 
 
